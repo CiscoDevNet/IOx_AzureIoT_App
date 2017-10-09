@@ -1,0 +1,23 @@
+descriptor-schema-version: "2.2"
+
+info:
+  name: iox_azure_iot_app
+  description: "Application to connect an IOx IoT Gateway App to Azure Cloud IoT Hub"
+  version: "1.02"
+  author-link: "http://developer.cisco.com"
+  author-name: "Jock Reed"
+
+app:
+
+  cpuarch: "x86_64"
+  type: docker
+  resources:
+    profile: c1.small
+    network:
+      -
+        interface-name: eth0
+
+  # Specify runtime and startup
+  startup:
+    rootfs: rootfs.tar
+    target: ["python3 /root/app.py"]

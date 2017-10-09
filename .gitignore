@@ -1,0 +1,7 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+bckup_package_config.ini
+bckup_package_config1.ini
