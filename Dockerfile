@@ -1,8 +1,7 @@
-FROM alpine
+FROM python:alpine
 
-RUN apk add -Uuv --no-cache python3 \
-    && apk upgrade -v --available --no-cache \
-    && apk add ca-certificates && pip3 install --no-cache-dir --upgrade pip setuptools wheel
+RUN apk upgrade -v --available --no-cache \
+    && apk add ca-certificates && pip install --no-cache-dir --upgrade pip setuptools wheel
 
 WORKDIR /root/
 
@@ -20,4 +19,4 @@ LABEL "cisco.cpuarch"="x86_64" \
       "cisco.resources.disk"="20" \
       "cisco.resources.network.0.interface-name"="eth0"
 
-CMD ["python3 app.py"]
+CMD ["python app.py"]
