@@ -3,7 +3,7 @@ descriptor-schema-version: "2.2"
 info:
   name: iox_azure_iot_app
   description: "Application to connect an IOx IoT Gateway App to Azure Cloud IoT Hub"
-  version: "1.04"
+  version: "1.06"
   author-link: "http://developer.cisco.com"
   author-name: "Jock Reed"
 

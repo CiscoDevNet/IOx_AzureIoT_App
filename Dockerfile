@@ -1,4 +1,4 @@
-FROM python:2-alpine
+FROM python:3.5-alpine
 
 RUN apk add ca-certificates && pip install --no-cache-dir --upgrade pip setuptools wheel
 
@@ -10,7 +10,7 @@ COPY cred_gen.py .
 COPY requirements.txt .
 COPY package_config.ini .
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 #IOx Labels
 LABEL "cisco.cpuarch"="x86_64" \
