@@ -1,4 +1,3 @@
-# Used from https://github.com/gloveboxes/Azure-IoT-Hub-with-Python-and-MQTT/blob/master/weather_mqtt/helper.py
 import base64
 import hmac
 import urllib.parse
@@ -21,7 +20,6 @@ class Creds:
         self.hubTopicPublish = 'devices/' + hubName + '/messages/events/'
         self.hubTopicSubscribe = 'devices/' + hubName + '/messages/devicebound/#'
 
-    # sas generator from https://github.com/bechynsky/AzureIoTDeviceClientPY/blob/master/DeviceClient.py
     def generate_sas_token(self, uri, key, expiry=3600):
         ttl = int(time.time()) + expiry
         urlToSign = urllib.parse.quote(uri, safe='')

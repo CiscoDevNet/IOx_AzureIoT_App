@@ -3,7 +3,7 @@ descriptor-schema-version: "2.2"
 info:
   name: iox_azure_iot_app
   description: "Application to connect an IOx IoT Gateway App to Azure Cloud IoT Hub"
-  version: "1.06"
+  version: "1.07"
   author-link: "http://developer.cisco.com"
   author-name: "Jock Reed"
 
@@ -16,6 +16,9 @@ app:
     network:
       -
         interface-name: eth0
+        ports:
+          tcp:
+            - 8000
 
   # Specify runtime and startup
   startup:
